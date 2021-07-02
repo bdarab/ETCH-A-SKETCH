@@ -5,13 +5,13 @@
 }
 
 .container {
+	width: 960px;
+	height: 960px;
 	position: absolute;
 	left: 25%;
 	display: grid;
 	justify-content: center;
 	align-content: center;
-	width: 960px;
-	height: 960px;
 	grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
 	grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
 }
@@ -30,4 +30,8 @@ button {
 	font-size: large;
 	font-weight: 600;
 	margin: 2% 0 2% 40%;
+}
+
+.zapper {
+	background-color: black;
 }

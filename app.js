@@ -13,5 +13,6 @@ Btn.addEventListener('click', (e) => {
 
 		container.append(el);
 		let squares = el.classList.add('square');
+		el.setAttribute('id', i);
 	}
 });
