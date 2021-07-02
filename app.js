@@ -1,31 +1,3 @@
-// window.addEventListener('DOMContentLoaded', (event) => {
-// 	console.log('DOM fully loaded and parsed');
-
-// 	const body = document.querySelector('body');
-// 	const Btn = document.createElement('button');
-// 	const container = document.querySelector('.container');
-// 	const squares = document.querySelectorAll('.square');
-// 	Btn.textContent = 'Create A New Grid';
-// 	body.insertBefore(Btn, container);
-
-// 	Btn.addEventListener('click', (e) => {
-// 		e.preventDefault();
-// 		for (let i = 0; i < 256; i++) {
-// 			const el = document.createElement('div');
-// 			container.append(el);
-// 			let squares = el.classList.add('square');
-// 			el.setAttribute('id', i);
-// 		}
-// 	});
-
-// 	squares.forEach((square) => {
-// 		square.addEventListener('mouseover', (e) => {
-// 			console.log(e);
-// 			e.preventDefault();
-// 			square.style.backgroundColor = 'black';
-// 		});
-// 	});
-// });
 const container = document.querySelector('.container');
 
 const Btn = Object.assign(document.createElement('button'), {
