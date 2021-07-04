@@ -9,9 +9,9 @@ body.superCenter {
 	background: rgb(2, 0, 36);
 	background: linear-gradient(
 		90deg,
-		rgba(2, 0, 36, 1) 0%,
-		rgba(9, 9, 121, 1) 35%,
-		rgba(0, 212, 255, 1) 100%
+		rgb(82, 94, 14) 0%,
+		rgb(187, 185, 52) 50%,
+		rgba(172, 170, 126, 0.904) 100%
 	);
 	display: grid;
 	place-items: center;
@@ -44,9 +44,13 @@ button {
 	font-size: 1rem;
 	font-weight: 600;
 	color: white;
-	background-color: blue;
-	/* margin-bottom: 5%;
-	margin-top: 2%; */
+	background: rgb(78, 39, 1);
+	background: linear-gradient(
+		90deg,
+		rgb(155, 60, 5) 0%,
+		rgb(102, 9, 121) 35%,
+		rgb(36, 0, 28) 100%
+	);
 }
 
 .zapper {
