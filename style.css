@@ -6,14 +6,19 @@
 
 body.superCenter {
 	height: 100vh;
-
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		90deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(9, 9, 121, 1) 35%,
+		rgba(0, 212, 255, 1) 100%
+	);
 	display: grid;
 	place-items: center;
 }
 
 .container {
 	width: max-content;
-
 	display: grid;
 	justify-content: center;
 	grid-template-columns: repeat(16, 25px);
@@ -25,17 +30,23 @@ body.superCenter {
 }
 
 .square.hovered {
-	background-color: black;
+	background-color: #000;
+}
+
+#BtnContainer {
+	grid-template-rows: 1, 20%;
 }
 
 button {
 	width: 30%;
 	padding: 0.5em;
-	border-radius: 0.25em;
-	font-size: large;
+	border-radius: 0.5em;
+	font-size: 1rem;
 	font-weight: 600;
 	color: white;
 	background-color: blue;
+	/* margin-bottom: 5%;
+	margin-top: 2%; */
 }
 
 .zapper {

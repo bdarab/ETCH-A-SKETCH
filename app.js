@@ -17,15 +17,18 @@ Btn.addEventListener(
 			container.append(el);
 		}
 	},
-	{ passive: true }
+	{ passive: true, once: true }
 );
 
 // Delegated event listener
 container.addEventListener(
 	'mouseover',
-	(e) => {
+	function setBg(e) {
 		if (!e.target.matches('.container .square')) return;
-		e.target.classList.add('hovered');
+		e.target.classList !== 'hovered';
+
+		const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+		e.target.style.backgroundColor = '#' + randomColor;
 	},
 	{ passive: true }
 );
