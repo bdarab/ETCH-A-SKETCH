@@ -17,6 +17,29 @@ body.superCenter {
 	place-items: center;
 }
 
+h1 {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 5rem;
+	background: linear-gradient(
+		90deg,
+		rgba(255, 0, 0, 1) 0%,
+		rgba(255, 154, 0, 1) 10%,
+		rgba(208, 222, 33, 1) 20%,
+		rgba(79, 220, 74, 1) 30%,
+		rgba(63, 218, 216, 1) 40%,
+		rgba(47, 201, 226, 1) 50%,
+		rgba(28, 127, 238, 1) 60%,
+		rgba(95, 21, 242, 1) 70%,
+		rgba(186, 12, 248, 1) 80%,
+		rgba(251, 7, 217, 1) 90%,
+		rgba(255, 0, 0, 1) 100%
+	);
+	border-radius: 1rem;
+	box-shadow: 2px 2px 10px gray;
+	color: rgba(69, 78, 15, 0.7);
+	padding: 10px;
+}
+
 .container {
 	width: max-content;
 	display: grid;
@@ -26,7 +49,8 @@ body.superCenter {
 }
 
 .square {
-	border: 1px solid rgb(235, 229, 229);
+	border: 1px solid rgba(36, 0, 28, 0.5);
+	box-shadow: 0.5px 0.5px 2px;
 }
 
 .square.hovered {
@@ -34,17 +58,18 @@ body.superCenter {
 }
 
 #BtnContainer {
-	grid-template-rows: 1, 20%;
+	grid-template-rows: 2, 20%;
 }
 
 button {
-	width: 30%;
+	width: 100%;
 	padding: 0.5em;
 	border-radius: 0.5em;
+	box-shadow: 2px 2px 5px rgb(58, 56, 56);
 	font-size: 1rem;
 	font-weight: 600;
-	color: white;
-	background: rgb(78, 39, 1);
+	color: rgb(216, 209, 202);
+	background: rgb(231, 200, 169);
 	background: linear-gradient(
 		90deg,
 		rgb(155, 60, 5) 0%,
@@ -53,10 +78,50 @@ button {
 	);
 }
 
-.zapper {
-	background-color: white;
+.input-container {
+	background-color: #fff;
+	border: 1px solid rgb(58, 56, 56);
+	border-radius: 0.5em;
+	box-shadow: 2px 2px 5px rgb(58, 56, 56);
+	margin-top: 5%;
+	padding: 10px;
+	text-align: center;
+	background: rgb(78, 39, 1);
+	background: linear-gradient(
+		90deg,
+		rgb(155, 60, 5) 0%,
+		rgb(102, 9, 121) 35%,
+		rgb(36, 0, 28) 100%
+	);
+	color: rgb(216, 209, 202);
+	font-weight: 500;
 }
 
-.zapper:hover {
-	background-color: black;
+.grid-size {
+	margin: 10px;
+}
+
+.btn {
+	background: rgba(78, 39, 1, 0.2);
+	border: 1px solid rgb(209, 208, 187, 0.5);
+	color: rgb(216, 209, 202);
+}
+
+form {
+	background-color: #fff;
+	border: 1px solid rgb(58, 56, 56);
+	border-radius: 0.5em;
+	box-shadow: 2px 2px 5px rgb(58, 56, 56);
+	margin-top: 5%;
+	padding: 10px;
+	text-align: center;
+	background: rgb(78, 39, 1);
+	background: linear-gradient(
+		90deg,
+		rgb(155, 60, 5) 0%,
+		rgb(102, 9, 121) 35%,
+		rgb(36, 0, 28) 100%
+	);
+	color: rgb(216, 209, 202);
+	font-weight: 500;
 }

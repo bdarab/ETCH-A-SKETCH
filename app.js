@@ -1,10 +1,9 @@
 const container = document.querySelector('.container');
 
 const Btn = Object.assign(document.createElement('button'), {
-	textContent: `Click to Create A New Grid, 
-							Double Click to Reset`,
+	textContent: `Click For Grid with Random Colors, Double Click to Reset`,
 });
-document.body.prepend(Btn);
+BtnContainer.prepend(Btn);
 
 Btn.addEventListener(
 	'click',
