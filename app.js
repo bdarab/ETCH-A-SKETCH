@@ -1,37 +1,72 @@
-const container = document.querySelector('.container');
+const buttons = document.querySelectorAll('button');
+const gridContainer = document.querySelector('.screen');
 
-const Btn = Object.assign(document.createElement('button'), {
-	textContent: `Click For Grid with Random Colors, Double Click to Reset`,
-});
-BtnContainer.prepend(Btn);
+let pixel = '';
+let blockSize = 50;
 
-Btn.addEventListener(
-	'click',
-	(e) => {
-		for (let i = 0; i < 256; i++) {
-			const el = Object.assign(document.createElement('div'), {
-				className: 'square',
-				id: `per-${i}`,
-			});
-			container.append(el);
+const createGrid = (screenSize) => {
+	for (i = 0; i < screenSize ** 2; i++) {
+		pixel = document.createElement('div');
+		pixel.classList.add('pixel');
+		pixel.style.backgroundColor = 'white';
+		gridContainer.appendChild(pixel);
+	}
+	gridContainer.style.gridTemplateColumns = `repeat(${screenSize}, auto)`;
+	gridContainer.style.gridTemplateRows = `repeat(${screenSize}, auto)`;
+};
+
+createGrid(blockSize);
+
+const clear = (request) => {
+	if (request === 'resize') {
+		blockSize = prompt('please enter a new grid size of not more than 100', 50);
+		if (blockSize > 100 || blockSize === null) {
+			blockSize = 50;
 		}
-	},
-	{ passive: true, once: true }
-);
+	}
+	gridContainer.innerHTML = '';
+	createGrid(blockSize);
+	active();
+};
 
-// Delegated event listener
-container.addEventListener(
-	'mouseover',
-	function setBg(e) {
-		if (!e.target.matches('.container .square')) return;
-		e.target.classList !== 'hovered';
-
-		const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-		e.target.style.backgroundColor = '#' + randomColor;
-	},
-	{ passive: true }
-);
-
-Btn.addEventListener('dblclick', (e) => {
-	window.location.reload();
+let defaultColor = 'black';
+buttons.forEach((button) => {
+	button.addEventListener('click', () => {
+		if (button.id === 'resize' || button.id === 'clear') {
+			clear(button.id);
+		} else {
+			defaultColor = button.id;
+			clear(button.id);
+		}
+	});
 });
+
+const randomColor = () => {
+	let color = 'rgba(';
+	for (let i = 0; i < 3; i++) {
+		color += Math.floor(Math.random() * 255) + ',';
+	}
+	return color + '1)';
+};
+
+const active = () => {
+	let pixels = document.querySelectorAll('.pixel');
+	pixels.forEach((pxl) => {
+		pxl.addEventListener('mouseover', (e) => {
+			let currentColor = getComputedStyle(pxl, null).getPropertyValue(
+				'background-color'
+			);
+			switch (defaultColor) {
+				case 'black':
+					e.target.style.backgroundColor = 'rgba(0,0,0)';
+					break;
+				case 'colors':
+					e.target.style.backgroundColor = randomColor();
+					break;
+				case 'shading':
+					e.target.style.backgroundColor = shading(currentColor);
+			}
+		});
+	});
+};
+active();

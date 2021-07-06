@@ -20,55 +20,19 @@
 		<link rel="stylesheet" href="style.css" />
 		<title>ETCH-A-SKETCH</title>
 	</head>
-	<body class="superCenter">
-		<h1>ETCH-A-SKETCH</h1>
-		<div class="row">
-			<div class="col">
-				<div id="BtnContainer">
-					<div class="input-container">
-						<h3>Choose your grid size</h3>
-						<input
-							type="radio"
-							class="grid-size"
-							data-name="grid-size"
-							value="grid-size"
-						/>
-						<label for="grid-size">8 x 50px</label>
-						<input
-							type="radio"
-							class="grid-size"
-							data-name="grid-size"
-							value="grid-size"
-							checked
-						/>
-						<label for="grid-size">16 x 25px</label>
-						<input
-							type="radio"
-							class="grid-size"
-							data-name="grid-size"
-							value="grid-size"
-						/>
-						<label for="grid-size">32 x 12px</label><br />
-						<button class="btn">submit your choice</button>
-					</div>
 
-					<form action="submit">
-						<h3>For a single color:</h3>
-						<label for="favcolor">Select your favorite color:</label>
-						<input
-							type="color"
-							id="favcolor"
-							name="favcolor"
-							value="#ff0000"
-						/><br /><br />
-						<input type="submit" class="btn" id="colorPick" />
-					</form>
-				</div>
+	<body>
+		<div class="container">
+			<h1>Bina's Etch A Sketch</h1>
+			<div class="buttons">
+				<button id="resize" type="button">Resize</button>
+				<button id="black" type="button">Black</button>
+				<button id="colors" type="button">Colors</button>
+
+				<button id="clear" type="button">Clear</button>
 			</div>
-			<div class="col">
-				<div class="container"></div>
-			</div>
+			<div class="screen"></div>
 		</div>
-		<script src="app.js" type="module"></script>
+		<script src="app.js"></script>
 	</body>
 </html>
